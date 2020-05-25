@@ -36,4 +36,4 @@ function get_sample() {
     request.send(null);
 };
 
-// document.getElementById("markdown").value = get_sample();
+document.getElementById("markdown").value = get_sample();
