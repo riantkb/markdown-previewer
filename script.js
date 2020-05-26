@@ -27,10 +27,11 @@ function get_sample() {
     request.open("GET", url, true);
     request.onreadystatechange = function() {
         if (request.readyState == 4 && request.status == 200) {
-            return request.responseText;
+            document.getElementById("markdown").value = request.responseText;
+            previewMarkdown();
         }
     }
     request.send(null);
 };
 
-document.getElementById("markdown").value = get_sample();
+get_sample();
